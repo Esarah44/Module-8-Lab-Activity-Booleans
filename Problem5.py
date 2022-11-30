@@ -31,3 +31,34 @@ def items_ready(task):
 
 items_ready_results = items_ready(character_task)
 print('Character\'s random task was ' + '"' + character_task + '".', items_ready_results[0] + '.', items_ready_results[1])
+
+#another way
+initial_list = [['pan','coat','idea','rope','groceries'], 'small']
+def items_ready(taskL):
+    missing  = []
+    for i in taskL[0]:
+        if i not in initial_list[0]:
+            missing.append(i)
+    if len(missing) != 0:
+        print("Some items are missing.")
+    else:
+        print("All items are ready")
+    #check debuf status
+    if taskL[1] == initial_list[1]:
+        print("The game character will be affected")
+    else:
+        print("no affect")
+         
+ def main():
+    task = ['task1', 'task2', 'task3']
+    taskSelect = random.choice(task)
+    
+    if taskSelect == 'task1':
+        taskL = [['rope'. 'coat', 'first aids'], 'small']
+         :
+    
+    
+    
+        
+        
+
